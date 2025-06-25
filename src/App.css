@@ -1,0 +1,25 @@
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  max-width: 100%;
+
+}
+
+:root {
+  --primarycolor: #FD8000;
+  --primaryColorBackground: rgb(248, 143, 37);
+  --secondarycolor: #f1c392;
+  --secondaryColorBackground: rgb(214, 210, 210);
+  --backgroundcolor: #d1cdcb;
+  --btnHoverBgColor:  #e77400;
+  --tertiaryBgColor:rgb(245, 220, 224);
+  --inputBgColor :#e6e6e6;
+}
+
+

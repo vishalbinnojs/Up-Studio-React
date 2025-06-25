@@ -1,0 +1,233 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+  height:120vh;
+}
+
+.container .box1 {
+    height: 100%;
+    width: 50%;
+    background: url('/images/logIn.jpg');
+    background-repeat: no-repeat;
+  background-position: right 60%;
+  background-size: cover;
+
+}
+
+.container .logo2 {
+    padding: 2rem;
+
+}
+
+.logo2 img {
+    width: 4.3rem;
+    height: 4rem;
+}
+
+.container .box2 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form {
+
+    width: 70%;
+    padding: 1rem;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form input[type="email"],
+#password {
+    background-color: var(--inputBgColor);
+    width: 100%;
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin: 10px 0;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+
+.form input::placeholder {
+    font-size: 0.8rem;
+}
+
+.form input:focus::placeholder {
+    transition: color 0.5s ease-out;
+    color: transparent;
+
+}
+
+.form .password-container {
+    position: relative;
+}
+
+.password-container .eye-icon {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem;
+    padding: 0 .5rem;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #111;
+
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 2px solid #888;
+    border-radius: 50%;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: var(--primarycolor);
+   
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.options a {
+    color: #111;
+
+}
+
+.login-btn {
+    background-color: var(--primaryColorBackground);
+    color: white;
+    padding: 1.1rem;
+    border: none;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 2.5rem 0rem;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--btnHoverBgColor);
+}
+
+h6 {
+    width: 90%;
+    text-align: center;
+    line-height: 0.12em;
+    margin: 0 auto;
+    border-bottom: 2px solid rgb(173, 171, 173);
+
+}
+
+h6 span {
+    background: rgb(255, 255, 255);
+    padding: 0 1rem;
+    font-weight: 500;
+
+}
+
+.google-login {
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 25px;
+    padding: .8rem;
+    cursor: pointer;
+    text-decoration:none;
+    color:#111;
+    font-weight: 800;
+    margin: 2.5rem 0rem;
+}
+
+.google-login img {
+    width: 25px;
+    height: 25px;
+
+}
+.box2 .p-text{
+    text-align:center;
+    font-size:.8rem;
+    font-weight:500;
+    letter-spacing: 1px;
+}
+.p-text a{
+    color:var(--primarycolor);
+}
+
+/* @media(max-width:1024px){
+.form{
+    width:80%;
+}
+}
+@media(max-width:834px){
+    .container{
+        height:110vh;
+    }
+    .form h2 {
+   
+    margin-bottom: 1.5rem;
+}
+}
+@media(max-width:768px){
+ .container{
+        height:110vh;
+    }
+    .logo2{
+        padding:1.5rem;
+    }
+    .logo2 img {
+    width: 3.5rem;
+    height: 3.2rem;
+}
+} 
+ @media(max-width:600px){
+    .container{
+        height:90vh;
+
+    }
+} */

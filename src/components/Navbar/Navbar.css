@@ -1,0 +1,181 @@
+nav {
+  background: transparent;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 100;
+}
+nav .logo img {
+  width: 3rem;
+  z-index: 200;
+}
+nav .logo:hover{
+    cursor:pointer;
+}
+
+nav .links {
+  width: 70%;
+  text-align: right;
+}
+
+nav .links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .links a:hover {
+  color: var(--primarycolor);
+}
+
+nav .links .active {
+  color: var(--primarycolor);
+}
+
+
+nav .auth {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+nav .auth button {
+  height: 1.8rem;
+  width: 4rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+
+.auth .login {
+  background-color: var(--primarycolor);
+  color: #fff;
+}
+
+.auth .signup {
+  color: var(--primarycolor);
+  background-color: var(--backgroundcolor);
+}
+
+.auth button:hover {
+  opacity: 0.9;
+   box-shadow:0px 8px 12px #333;
+}
+
+.auth .profile-link {
+  text-decoration: none;
+}
+
+.auth .profile-img {
+  display: inline-block;
+  font-size: 2.2rem;
+  color: var(--primarycolor);
+  width: 32px;
+  height: 32px;
+  background-image: url('your-image-path.jpg');
+  background-size: cover;
+  /* Hide default icon */
+  /* font-size: 0 !important;
+  color: transparent !important; */
+}
+
+nav #menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--primarycolor);
+  cursor: pointer;
+}
+
+/* Tablets Responsiveness */
+@media(max-width:700px) {
+  nav {
+    padding: 1rem;
+  }
+
+  nav .links {
+    width: 60%;
+  }
+
+  nav .links a {
+    margin: 0 1rem 0 0;
+    gap: 0;
+  }
+}
+
+@media (max-width:650px) {
+  nav .links a {
+    margin: 0 0.6rem 0 0;
+    font-size: 13px;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .text h2 {
+    font-size: 20px;
+  }
+}
+
+/* mobile responsiveness */
+@media(max-width:500px) {
+
+  nav #menu-toggle {
+    display: block;
+  }
+
+  nav .links a {
+    margin: 0;
+    font-size: 15px;
+    gap: 0;
+  }
+
+  nav .links,
+  nav .auth {
+    display: none;
+    width: 100%;
+    background: #333;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+
+
+  }
+
+  nav .links.show {
+
+    display: flex;
+    left: 0;
+    top: 5rem;
+
+  }
+
+  nav .auth.show {
+    display: flex;
+    top: 14.2rem;
+    right: 0;
+  }
+
+  nav {
+    background: #333;
+    position: sticky;
+    top: 0;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  nav .auth .profile-link {
+    display: none;
+  }
+
+
+}
