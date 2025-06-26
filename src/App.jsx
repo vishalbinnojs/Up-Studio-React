@@ -11,11 +11,12 @@ import "./App.css";
 
 function App() {
   const location = useLocation();
-  console.log(location)
+  // hiding footer on below pages
   const hideFooterPaths = ["/login", "/signup"];
   const shouldHideFooter = hideFooterPaths.includes(location.pathname);
-
-
+// Transparent Navbar
+  // const transparentRoutes = ['/','/about'];
+  // const isTransparent = transparentRoutes.includes(location.pathname);
   return (
     <>
       <Routes>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
       </Routes>
+          {/* Hide Footer */}
       {!shouldHideFooter && <Footer />}
     </>
   );

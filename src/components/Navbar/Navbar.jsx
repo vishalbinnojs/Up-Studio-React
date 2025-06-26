@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <>
     
-     <nav  ref={navRef} >
+     <nav ref={navRef} >
       <div className="logo">
         <img src="/images/logo.png" alt="logo" />
       </div>

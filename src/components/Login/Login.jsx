@@ -45,7 +45,7 @@ const Login = () => {
                 Login
               </button>
             </form>
-            <h6>
+            <h6 className="login-with">
               <span>Or login with</span>
             </h6>
             <a className="google-login" href="#">

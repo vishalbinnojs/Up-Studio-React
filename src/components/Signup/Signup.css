@@ -7,7 +7,7 @@
 }
 
 .container .box1 {
-    height: 120vh;
+    height: 110vh;
     width: 50%;
     background: url('/images/logIn.jpg');
     background-repeat: no-repeat;
@@ -46,14 +46,15 @@
     margin-bottom: 2rem;
 }
 
-.form input[type="email"],
-#password {
+.form .input-field {
     background-color: var(--inputBgColor);
     width: 100%;
     padding: 1rem 1rem 1rem 1.5rem;
     margin: 10px 0;
     border-radius: 1.5rem;
     font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
     outline: none;
     border: none;
 }
@@ -78,58 +79,11 @@
     top: 1.5em;
 }
 
-.options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0rem;
-    padding: 0 .5rem;
-    font-size: 0.8em;
-    font-weight: 600;
-    color: #111;
 
-}
+/* Dropdown css */
 
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer;
-    user-select: none;
-}
 
-.checkbox-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
 
-.checkmark {
-    position: absolute;
-    left: 0;
-    height: 16px;
-    width: 16px;
-    background-color: #fff;
-    border: 2px solid #888;
-    border-radius: 50%;
-}
-
-.checkbox-container input:checked~.checkmark {
-    background-color: var(--primarycolor);
-
-}
-
-.checkmark::after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.options a {
-    color: #111;
-
-}
 
 .login-btn {
     background-color: var(--primaryColorBackground);
@@ -150,44 +104,6 @@
     background: var(--btnHoverBgColor);
 }
 
-.login-with {
-    width: 90%;
-    text-align: center;
-    line-height: 0.15em;
-    margin: 0 auto;
-    border-bottom: 2px solid rgb(173, 171, 173);
-
-}
-
-.login-with span {
-    background: rgb(255, 255, 255);
-    padding: 0 1rem;
-    font-weight: 500;
-
-}
-
-.google-login {
-
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border: 1px solid #aaa;
-    border-radius: 25px;
-    padding: .8rem;
-    cursor: pointer;
-    text-decoration: none;
-    color: #111;
-    font-weight: 800;
-    margin: 2.5rem 0rem;
-}
-
-.google-login img {
-    width: 25px;
-    height: 25px;
-
-}
 
 .box2 .p-text {
     text-align: center;
@@ -199,46 +115,48 @@
 .p-text a {
     color: var(--primarycolor);
 }
-@media(max-width:1280px){
-    .form{
-        width:80%;
+
+@media(max-width:1280px) {
+    .form {
+        width: 80%;
     }
 }
 
- @media(max-width:1024px){
-.form{
-    width:90%;
-}
-.logo2 img {
+@media(max-width:1024px) {
+    .form {
+        width: 90%;
+    }
+
+    .logo2 img {
         width: 3.9rem;
         height: 3.5rem;
     }
 }
 
-@media(max-width:834px){
- .container {
+@media(max-width:834px) {
+    .container {
         flex-direction: column;
     }
-    
+
     .container .box1 {
-        height: 110vh;
+        height: 100vh;
         width: 100%;
         background: url('/images/logIn.jpg');
         background-repeat: no-repeat;
         background-position: right 60%;
         background-size: cover;
     }
-    
-    
 
     .container .logo2 {
         padding: 1.3rem;
     }
- .logo2 img {
+
+    .logo2 img {
         width: 3.7rem;
         height: 3.3rem;
     }
-  .container .box2 {
+
+    .container .box2 {
         width: 100%;
     }
 
@@ -246,13 +164,15 @@
         width: 70%;
         padding: 2rem 0rem;
     }
-     .form h2 {
+
+    .form h2 {
 
         margin-bottom: 1.5rem;
     }
-} 
+}
+
 @media(max-width:600px) {
-   
+
 
     .logo2 img {
         width: 3.7rem;
@@ -263,8 +183,7 @@
         width: 80%;
     }
 
-    .login-btn,
-    .google-login {
+    .login-btn {
         margin: 2rem 0rem;
     }
 }
@@ -276,17 +195,12 @@
         height: 2.8rem;
     }
 
-    .options,
-    .option a {
-        font-size: 0.7em;
-    }
     .box2 .p-text {
-    font-size: .6rem;
-}
-  .login-btn{
-    padding:0.8rem;
-  }
-  .google-login{
-    padding:0.6rem;
-  }
+        font-size: .6rem;
+    }
+
+    .login-btn {
+        padding: 0.8rem;
+    }
+
 }
