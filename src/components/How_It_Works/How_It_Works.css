@@ -10,13 +10,14 @@
 }
 
 .booking-text {
+
     text-align: center;
     padding: 1em;
 }
 
 .booking-text h1 {
-    margin-bottom: 0.8em;
     font-size: 2em;
+    margin-bottom: 0.8em;
 }
 
 .booking-text p {
@@ -39,17 +40,17 @@
 }
 
 .booking-details .box .list {
-    margin: 3em 0em;
+    margin: 2em 0em;
 }
 
 .box .list .list-items {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     font-size: 1.2em;
     color: #333;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap:0.3em;
+    gap: 0.4em;
 
 }
 
@@ -68,6 +69,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    z-index:200;
 }
 
 .btn-box .btn:hover {
@@ -79,14 +81,15 @@
 }
 
 /* *************** Responsiveness ************ */
-@media(max-width:1024px){
+@media(max-width:1024px) {
     .booking-details .box {
         width: 45em;
-         padding: 2em 3em 1em 3em;
+        padding: 2em 3em 1em 3em;
     }
-    
+
 
 }
+
 @media(max-width:768px) {
     .booking-details h1 {
         font-size: 1.8em;
@@ -107,16 +110,14 @@
         height: 65px;
 
     }
-    .booking-details .box h2 {
-    font-size:1.4em;
-}
 
-    .booking-details .box .list {
-        margin: 2.5em 0em;
+    .booking-details .box h2 {
+        font-size: 1.4em;
     }
 
+
     .box .list .list-items {
-        font-size: 1em;
+        font-size: 1.4em;
     }
 
     .btn-box .btn {
@@ -129,7 +130,6 @@
     .booking-flow {
         margin: 1.5rem 0rem;
     }
-
 }
 
 
@@ -151,11 +151,12 @@
     .booking-details .box .profile-img {
         width: 50px;
         height: 50px;
-        margin-bottom:0.9em;
+        margin-bottom: 0.9em;
     }
-       .booking-details .box h2 {
-    font-size:1.3em;
-}
+
+    .booking-details .box h2 {
+        font-size: 1.3em;
+    }
 
 
     .booking-details .box .list {
@@ -178,26 +179,30 @@
     }
 }
 
-@media(max-width:520px){
-       .booking-details .box h2 {
-    font-size:1.2em;
-}
-     .booking-details .box {
+@media(max-width:520px) {
+    .booking-details .box h2 {
+        font-size: 1.2em;
+    }
+
+    .booking-details .box {
         width: 32em;
         padding: 1.5em 1.5em 1em 1.5em;
     }
-     .booking-details .box .profile-img {
+
+    .booking-details .box .profile-img {
         width: 40px;
         height: 40px;
-        margin-bottom:0.8em;
+        margin-bottom: 0.8em;
     }
+
     .btn-box .btn {
         padding: 0.5em 0.9em;
-      
+
     }
 
 }
-@media(max-width:400px){
+
+@media(max-width:400px) {
     .booking-text p {
         font-size: 1em;
 
@@ -205,13 +210,13 @@
 
     .booking-details .box {
         width: 30em;
-        padding: 1em ;
+        padding: 1em 1em 1em 2em;
     }
 
     .booking-details .box .profile-img {
         width: 35px;
         height: 35px;
-        margin-bottom:0.7em;
+        margin-bottom: 0.7em;
     }
 
 

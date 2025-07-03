@@ -11,7 +11,7 @@ const How_It_Works = () => {
       <Navbar />
       <section className = "booking-details">
         <div className="booking-text">
-          <h1>How Booking Works — Seamless & Smart</h1>
+          <h1>How Booking Works <br /> — <br />Seamless & Smart</h1>
      
           <p>
             We connect artists, technicians, and studio owners through <br />
