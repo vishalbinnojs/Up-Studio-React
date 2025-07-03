@@ -155,7 +155,7 @@ const Home = () => {
                     src="/images/calender.png"
                     alt="calender"
                     width="15px;"
-                  />{" "}
+                  />
                   Smart Calender Sync
                 </h5>
                 <p>
@@ -181,14 +181,14 @@ const Home = () => {
                     src="/images/messaging.png"
                     alt="messaging"
                     width="15px;"
-                  />{" "}
+                  />
                   Integrated Messaging
                 </h5>
                 <p>Sessions are confirmed only when all parties agree.</p>
               </div>
               <div className="txts">
                 <h5>
-                  <img src="/images/rate.png" alt="label" width="15px;" />{" "}
+                  <img src="/images/rate.png" alt="label" width="15px;" />
                   Flexible Rates
                 </h5>
                 <p>Studio & technician hourly pricing made transparent.</p>
@@ -292,7 +292,7 @@ const Home = () => {
                     <span className="fa fa-star checked"></span>
                   </span>
                   <h6>
-                    Alex,{" "}
+                    Alex,
                     <span style={{ fontSize: "1em", fontWeight: "400" }}>
                       Rap Artist
                     </span>
@@ -318,7 +318,7 @@ const Home = () => {
                     <span className="fa fa-star checked"></span>
                   </span>
                   <h6>
-                    Nina,{" "}
+                    Nina,
                     <span style={{ fontSize: "1em", fontWeight: "400" }}>
                       Sound Technician
                     </span>
@@ -344,7 +344,7 @@ const Home = () => {
                     <span className="fa fa-star checked"></span>
                   </span>
                   <h6>
-                    Diamond Studios,{" "}
+                    Diamond Studios,
                     <span style={{ fontSize: "1em", fontWeight: "400" }}>
                       Studio Owner
                     </span>

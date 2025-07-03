@@ -1,5 +1,5 @@
-nav {
-  background: transparent;
+.navbar  {
+ 
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -7,45 +7,62 @@ nav {
   padding: 1rem 2rem;
   z-index: 100;
 }
-nav .logo img {
-  width: 3rem;
+.navbar.transparent{
+  background-color:transparent;
+  color:white;
+}
+.navbar.white{
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+ 
+}
+
+.navbar .logo img {
+  width: 4rem;
   z-index: 200;
 }
-nav .logo:hover{
+.navbar .logo:hover{
     cursor:pointer;
 }
 
-nav .links {
+.navbar .links {
   width: 70%;
   text-align: right;
 }
 
-nav .links a {
+.navbar .links a {
   margin: 0 1rem;
   text-decoration: none;
-  color: #fff;
   font-size: 15px;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
+.links a.black{
+  color:#111;
+  font-weight:600;
+}
+.links a.white{
+  color:#ffffff;
 
-nav .links a:hover {
+}
+
+.navbar .links a:hover {
   color: var(--primarycolor);
 }
 
-nav .links .active {
+.navbar .links .active {
   color: var(--primarycolor);
 }
 
 
-nav .auth {
+.navbar .auth {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 
-nav .auth button {
+.navbar .auth button {
   height: 1.8rem;
   width: 4rem;
   border-radius: 4px;
@@ -88,7 +105,7 @@ nav .auth button {
   color: transparent !important; */
 }
 
-nav #menu-toggle {
+.navbar #menu-toggle {
   display: none;
   font-size: 2rem;
   color: var(--primarycolor);
@@ -97,22 +114,22 @@ nav #menu-toggle {
 
 /* Tablets Responsiveness */
 @media(max-width:700px) {
-  nav {
+  .navbar {
     padding: 1rem;
   }
 
-  nav .links {
+  .navbar .links {
     width: 60%;
   }
 
-  nav .links a {
+  .navbar .links a {
     margin: 0 1rem 0 0;
     gap: 0;
   }
 }
 
 @media (max-width:650px) {
-  nav .links a {
+  .navbar .links a {
     margin: 0 0.6rem 0 0;
     font-size: 13px;
     gap: 0;
@@ -125,20 +142,23 @@ nav #menu-toggle {
 }
 
 /* mobile responsiveness */
-@media(max-width:500px) {
+@media(max-width:510px) {
+  .navbar .logo img {
+  width: 3rem;
+  } 
 
-  nav #menu-toggle {
+  .navbar #menu-toggle {
     display: block;
   }
 
-  nav .links a {
+  .navbar .links a {
     margin: 0;
     font-size: 15px;
     gap: 0;
   }
 
-  nav .links,
-  nav .auth {
+  .navbar .links,
+  .navbar .auth {
     display: none;
     width: 100%;
     background: #333;
@@ -152,7 +172,7 @@ nav #menu-toggle {
 
   }
 
-  nav .links.show {
+  .navbar .links.show {
 
     display: flex;
     left: 0;
@@ -160,20 +180,26 @@ nav #menu-toggle {
 
   }
 
-  nav .auth.show {
+  .navbar .auth.show {
     display: flex;
     top: 14.2rem;
     right: 0;
   }
 
-  nav {
+  .navbar.transparent {
     background: #333;
     position: sticky;
     top: 0;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   }
+  .navbar.white{
+    background:#ffffff;
+  }
+  .navbar.white .links, .navbar.white .auth{
+    background: #ffffff;
+  }
 
-  nav .auth .profile-link {
+  .navbar .auth .profile-link {
     display: none;
   }
 

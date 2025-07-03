@@ -85,22 +85,22 @@
 
 
 
-.login-btn {
+.signup-btn {
     background-color: var(--primaryColorBackground);
     color: white;
-    padding: 1.1rem;
+    padding: 0.9rem;
     border: none;
     width: 100%;
     border-radius: 25px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
-    font-weight: 800;
+    font-weight: 700;
     cursor: pointer;
     margin: 2.5rem 0rem;
     transition: background 0.3s ease;
 }
 
-.login-btn:hover {
+.signup-btn:hover {
     background: var(--btnHoverBgColor);
 }
 
@@ -183,7 +183,7 @@
         width: 80%;
     }
 
-    .login-btn {
+    .signup-btn {
         margin: 2rem 0rem;
     }
 }
@@ -199,7 +199,7 @@
         font-size: .6rem;
     }
 
-    .login-btn {
+    .signup-btn {
         padding: 0.8rem;
     }
 

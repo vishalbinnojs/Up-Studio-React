@@ -18,27 +18,27 @@
     width: 5rem;
 }
 
-.box-child h5 {
+.box-child-2 h5 {
     margin-bottom: 0.6rem;
 }
 
-.box-child ul {
+.box-child-2 ul {
     list-style-type: none;
 
 }
 
-.box-child li {
+.box-child-2 li {
     padding: .1rem 0rem;
 
 }
 
-.box-child li a {
+.box-child-2 li a {
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-size: .70rem;
 }
-.box-child li a:hover{
+.box-child-2 li a:hover{
   color:#333;
   text-decoration:underline;
 }
@@ -70,8 +70,8 @@ input::placeholder {
 
 .box-child-3 .ip-box button {
     border:none;
-  background-color: var(--primarycolor);
-  padding: .5rem .8rem;
+    background-color: var(--primarycolor);
+    padding: .5rem .8rem;
     width: 80px;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -88,6 +88,40 @@ input::placeholder {
 .box-child-3 p {
     font-size: .6rem;
     font-weight: 400;
+}
+
+.box-child-3 .social-media{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap:2rem;
+  margin-top:1rem;
+}
+.social-media a{
+  background-color:var(--primaryColorBackground);
+  color:rgb(255, 255, 255);
+  border-radius:50%;
+  width:35px;
+  height:35px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  transition: all 0.3s ease-out;  
+}
+.social-media a:nth-child(1):hover{
+  background: linear-gradient(45deg, #D44638, #EA4335, #FBBC05);
+  color:purple;
+}
+.social-media a:nth-child(2):hover{
+  
+  background: linear-gradient(45deg, #D44638, #EA4335, #FBBC05);
+  color:blue;
+}
+.social-media a:nth-child(3):hover{
+
+   background: linear-gradient(45deg, #D44638, #EA4335, #FBBC05);
+  color:rgb(153, 0, 0);
+ 
 }
 
 @media(max-width:780px){

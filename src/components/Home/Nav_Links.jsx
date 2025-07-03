@@ -1,5 +1,10 @@
 import React from 'react'
+import Logo2 from "../../assets/Logo2.png"
 import "./Nav_Links.css";
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faInstagram,faFacebook} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
 const Nav_Links = () => {
   return (
     <>
@@ -9,10 +14,10 @@ const Nav_Links = () => {
     <div className="navigation-box">
     <div className="box-child-1">
         
-            <img src="/images/Logo2.png" alt="" />
+            <img src={Logo2} alt="logo" />
         
     </div>
-    <div className="box-child">
+    <div className="box-child-2">
         <h5>
             Company
         </h5>
@@ -25,7 +30,7 @@ const Nav_Links = () => {
             
         </ul>
     </div>
-    <div className="box-child">
+    <div className="box-child-2">
         <h5>
             Explore
         </h5>
@@ -48,6 +53,12 @@ const Nav_Links = () => {
         <p>Subscribe to our monthly newsletter to get latest
             news
         </p>
+        <div className="social-media">
+      <a href="https://www.instagram.com/" target="_blank"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
+      <a href="https://www.facebook.com/" target='_blank'><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
+      <a href="https://www.gmail.com/" target="_blank"><FontAwesomeIcon icon={faEnvelope} size="lg" /></a>
+      
+        </div>
         
     </div>
 </div>

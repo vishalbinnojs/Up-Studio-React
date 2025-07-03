@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import logo from "../../assets/logo.png";
 import "./Signup.css";
 import Dropdown from "./Dropdown";
 
@@ -16,7 +17,7 @@ const Signup = () => {
           <div className="container">
         <div className="box1">
           <div className="logo2">
-            <img src="/images/logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
         </div>
         <div className="box2">
@@ -40,8 +41,8 @@ const Signup = () => {
                  
                   <Dropdown />
 
-              <button type="submit" className="login-btn">
-                Login
+              <button type="submit" className="signup-btn">
+                Signup
               </button>
             </form>
            

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../../assets/logo.png";
 import "./Login.css";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,7 +13,7 @@ const Login = () => {
       <div className="container">
         <div className="box1">
           <div className="logo2">
-            <img src="/images/logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
         </div>
         <div className="box2">
@@ -53,7 +54,7 @@ const Login = () => {
               Google
             </a>
             <p className="p-text">
-              Don’t have account? <a href="">SignUp now</a>
+              Don’t have account? <a href="/signup">SignUp now</a>
             </p>
           </div>
         </div>
