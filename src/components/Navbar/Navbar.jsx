@@ -1,20 +1,21 @@
 import React, { useState,useRef, useEffect } from "react";
 import {useLocation} from "react-router-dom";
-import logo from "../../assets/logo.png";
-import Logo2 from "../../assets/Logo2.png";
+import logo1 from "../../assets/logo1.png";
+import logo2 from "../../assets/logo2.png";
 import "./Navbar.css";
 
 
 
 const Navbar = () => {
-  const [isOpen,setIsOpen] =useState(false);
+  const [isOpen,setIsOpen] = useState(false);
   const navRef = useRef(null);
   // Transparent Navbar
   const location = useLocation();
+  console.log(location)
  const [isTransparent,setIsTransparent] = useState(true);
  
 // Logo switch
- const Logo = ['/','/about'].includes(location.pathname) ?  logo : Logo2;
+ const Logo = ['/','/about'].includes(location.pathname) ?  logo1 : logo2;
 
  // Active color on desired link
  const isActive = (path) => location.pathname === path;
