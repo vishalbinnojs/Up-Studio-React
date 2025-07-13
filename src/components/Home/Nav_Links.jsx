@@ -23,7 +23,7 @@ const Nav_Links = () => {
         </h5>
         <ul>
             <li><a href="/about">About Us</a></li>
-            <li><a href="#">How It Works</a></li>
+            <li><a href="/howitworks">How It Works</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Blog/News</a></li>
             <li><a href="#">Contact</a></li>

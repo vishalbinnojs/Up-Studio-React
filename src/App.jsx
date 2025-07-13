@@ -6,6 +6,7 @@ import FAQs from "./components/FAQs/FAQs";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import About from "./components/About_Us/About";
+import Artist from "./components/Artist_profile/Artist";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
+        <Route path="/artist" element={<Artist />} />
       </Routes>
           {/* Hide Footer */}
       {!shouldHideFooter && <Footer />}
