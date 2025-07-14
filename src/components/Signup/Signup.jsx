@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import logo from "../../assets/logo.png";
+import logo1 from "../../assets/logo1.png";
 import "./Signup.css";
 import Dropdown from "./Dropdown";
 
@@ -17,7 +17,7 @@ const Signup = () => {
           <div className="container">
         <div className="box1">
           <div className="logo2">
-            <img src={logo} alt="logo" />
+            <img src={logo1} alt="logo" />
           </div>
         </div>
         <div className="box2">

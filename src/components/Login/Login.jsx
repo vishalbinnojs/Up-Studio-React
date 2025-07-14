@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo1 from "../../assets/logo1.png";
 import "./Login.css";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,7 +13,7 @@ const Login = () => {
       <div className="container">
         <div className="box1">
           <div className="logo2">
-            <img src={logo} alt="logo" />
+            <img src={logo1} alt="logo" />
           </div>
         </div>
         <div className="box2">

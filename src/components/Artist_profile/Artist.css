@@ -2,8 +2,9 @@
     width: 100%;
     height: 55vh;
     background-image:
-        radial-gradient(circle, transparent 10%, rgba(0, 0, 0, 0.3) 80%),
+        linear-gradient(to top,  rgba(0, 0, 0, 0.3) 80%),
         url("/images/guitar-hero.png ");
+       
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -32,7 +33,6 @@
 
 .profile-text {
     align-self: center;
-    ;
     color: #fff;
     font-weight: 600;
     letter-spacing: 2px;
@@ -226,6 +226,14 @@
         margin: 4rem 0;
         padding: 0 2rem 0 3rem;
     }
+    .about p {
+    word-spacing: 0px;
+    line-height: 1.1rem;
+}
+
+    
+    
+
 .booking-card {
     flex-direction:column;
 }

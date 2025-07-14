@@ -8,7 +8,9 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen,setIsOpen] = useState(false);
+  console.log(isOpen)
   const navRef = useRef(null);
+  console.log(navRef)
   // Transparent Navbar
   const location = useLocation();
   console.log(location)
@@ -61,9 +63,9 @@ useEffect(() => {
       </div>
       <div className ={`links ${isOpen ? 'show':''}`}>
         <a className ={`${isTransparent ? 'white':'black'} ${isActive('/') ? 'active':''}` } href="/" onClick={()=>setIsOpen(false)}>Home</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/howitworks') ? 'active':''}`}href="/howitworks" onClick={()=>setIsOpen(false)}>How It Works</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/featrues') ? 'active':''}`}href="/features" onClick={()=>setIsOpen(false)}>Features</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/FAQs') ? 'active':''}`}href="/FAQs" onClick={()=>setIsOpen(false)}>FAQs</a>
+        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/howitworks') ? 'active':''}`} href="/howitworks" onClick={()=>setIsOpen(false)}>How It Works</a>
+        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/featrues') ? 'active':''}`} href="/features" onClick={()=>setIsOpen(false)}>Features</a>
+        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/FAQs') ? 'active':''}`} href="/FAQs" onClick={()=>setIsOpen(false)}>FAQs</a>
       </div>
       <div className={`auth ${isOpen ? 'show':''}`}>
         <a href="/login" onClick={()=>setIsOpen(false)}><button className="login">Login</button></a>
