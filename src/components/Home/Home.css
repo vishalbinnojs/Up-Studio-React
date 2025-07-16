@@ -247,13 +247,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   z-index: 1;
 }
 
-.studio-box .title span {
+.studio-box .title a{
   font-size: 0.75rem;
   color: var(--primarycolor);
   font-weight: 600;
+  text-decoration:none;
 }
 
-.studio-box .title span::after,
+.studio-box .title a::after,
 span:hover {
   content: " >";
   cursor: pointer;

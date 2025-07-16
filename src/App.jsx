@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./components/Home/Home";
+import View from "./components/Home/View";
 import How_It_Works from "./components/How_It_Works/How_It_Works";
 import Features from "./components/Features/Features";
 import FAQs from "./components/FAQs/FAQs";
@@ -8,6 +9,7 @@ import Signup from "./components/Signup/Signup";
 import About from "./components/About_Us/About";
 import Artist from "./components/Artist_profile/Artist";
 import Footer from "./components/Footer/Footer";
+
 import "./App.css";
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
         <Route path="/artist" element={<Artist />} />
+        <Route path="/view" element ={<View />} />
       </Routes>
           {/* Hide Footer */}
       {!shouldHideFooter && <Footer />}

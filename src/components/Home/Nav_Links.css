@@ -19,6 +19,7 @@
 }
 
 .box-child-2 h5 {
+  font-size:1rem;
     margin-bottom: 0.6rem;
 }
 
@@ -28,7 +29,7 @@
 }
 
 .box-child-2 li {
-    padding: .1rem 0rem;
+    padding: .2rem 0rem;
 
 }
 
@@ -36,26 +37,37 @@
     text-decoration: none;
     color: black;
     font-weight: 500;
-    font-size: .70rem;
+    font-size: .80rem;
 }
 .box-child-2 li a:hover{
   color:#333;
   text-decoration:underline;
 }
-.box-child-3 .ip-box {
-    margin:1rem 0;
-    display:flex;
-    justify-content:center;
-    z-index:100;
+.box-child-3{
+  width:300px;
+}
+.box-child-3 h5{
+  font-size:1rem;
+}
+.box-child-3 .subscribe{
+  font-size:.7rem;
+  padding-left:.2rem;
 }
 
-
-.ip-box input {
-    padding: .5rem .8rem;
+.box-child-3 .ip-box {
+    margin:1.2rem 0;
+    z-index:100;
+  }
+  
+  
+  .ip-box input {
+  align-self:flex-start;
+    padding: .8rem 1rem;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     border: none;
     outline: none;
+    width:70%;
     
 }
 .ip-box input:focus-visible{
@@ -64,15 +76,15 @@
 
 input::placeholder {
     color: #666;
-    font-size: .6rem;
+    font-size: .7rem;
     font-weight: 600;
 }
 
 .box-child-3 .ip-box button {
     border:none;
     background-color: var(--primarycolor);
-    padding: .5rem .8rem;
-    width: 80px;
+    padding: .9rem 1.2rem;
+    width:30%;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     color: white;
@@ -94,7 +106,7 @@ input::placeholder {
   display:flex;
   justify-content: center;
   align-items:center;
-  gap:2rem;
+  gap:3rem;
   margin-top:1rem;
 }
 .social-media a{

@@ -1,5 +1,8 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 import Navbar from "../Navbar/Navbar";
+
 import Nav_Links from "./Nav_Links";
 import "./Home.css";
 
@@ -60,12 +63,12 @@ const Home = () => {
         <section className="studio-box">
           <div className="title">
             <h3>Our Feature Listing</h3>
-            <span>View All</span>
+            <Link to="/view">View All</Link>
           </div>
           <div className="studio-items-box">
             <div className="item item1">
               <div className="img-box">
-                <img src="/images/img1.png" alt="" />
+                <img src="/images/Studio 1.png" alt="Icon Studio Inn" />
               </div>
               <div className="detail-box">
                 <div className="rating-box">
@@ -92,7 +95,7 @@ const Home = () => {
 
             <div className="item item2">
               <div className="img-box">
-                <img src="/images/Studio 2.png" alt="" />
+                <img src="/images/Studio 2.png" alt="Soundlab Studio" />
               </div>
               <div className="detail-box">
                 <div className="rating-box">
@@ -118,7 +121,7 @@ const Home = () => {
             </div>
             <div className="item item3">
               <div className="img-box">
-                <img src="/images/img1.png" alt="" />
+                <img src="/images/Studio 1.png" alt="Diamond Studio" />
               </div>
               <div className="detail-box">
                 <div className="rating-box">

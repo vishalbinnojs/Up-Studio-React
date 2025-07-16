@@ -50,7 +50,7 @@ const Nav_Links = () => {
             <button type="submit">Subscribe</button>
 
         </div>
-        <p>Subscribe to our monthly newsletter to get latest
+        <p class="subscribe">Subscribe to our monthly newsletter to get latest
             news
         </p>
         <div className="social-media">
