@@ -7,8 +7,11 @@ import FAQs from "./components/FAQs/FAQs";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import About from "./components/About_Us/About";
-import Artist from "./components/Artist_profile/Artist";
+import Artist from "./components/Profiles/Artist";
+import Technician from "./components/Profiles/Technician";
+import Owner from "./components/Profiles/Owner";
 import Footer from "./components/Footer/Footer";
+
 
 import "./App.css";
 
@@ -30,6 +33,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/artist" element={<Artist />} />
         <Route path="/view" element ={<View />} />
+        <Route path="/technician" element={<Technician />} />
+        <Route path = "/owner" element={<Owner/>} />
       </Routes>
           {/* Hide Footer */}
       {!shouldHideFooter && <Footer />}

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./Artist.css";
 import Navbar from "../Navbar/Navbar";
 import Nav_Links from "../Home/Nav_Links";
@@ -31,17 +31,17 @@ const bookings = [
   },
 ];
 
-const Artist = () => {
-  const [activeTab, setActiveTab] = useState('');
+const Technician = () => {
+  const [activeTab, setActiveTab] = useState("");
   return (
     <>
       <Navbar />
-      <div className="profile-banner"></div>
-      <div className="profile-box">
-        <div className="profile-image"></div>
+      <div className="profile-banner profile-banner2"></div>
+      <div className="profile-box profile-box2">
+        <div className="profile-image profile-image2"></div>
         <div className="profile-text">
-          <h1>Sarah Smith</h1>
-          <span>Artist </span>
+          <h1>John Walker</h1>
+          <span>Technician </span>
         </div>
       </div>
       {/*********  About Section ************/}
@@ -70,8 +70,8 @@ const Artist = () => {
                   style={{ color: "green", marginRight: "0.8rem" }}
                   size="xl"
                 />
-                
-                <a href="#">SarahSmithArtist_spotify</a>
+
+                <a href="#">TechJohnWalker_spotify</a>
               </div>
 
               <div className="social-item item-2">
@@ -80,7 +80,7 @@ const Artist = () => {
                   style={{ color: "purple", marginRight: "1rem" }}
                   size="xl"
                 />
-                <a href="#">SarahSmith_instagram</a>
+                <a href="#">TechJohnWalker_instagram</a>
               </div>
 
               <div className="social-item">
@@ -89,7 +89,7 @@ const Artist = () => {
                   style={{ color: "red", marginRight: "0.6rem" }}
                   size="xl"
                 />
-                <a href="#">SarahSmith_youtube</a>
+                <a href="#">TechJohnWalker_youtube</a>
               </div>
             </div>
           </div>
@@ -97,47 +97,52 @@ const Artist = () => {
       </section>
 
       {/* Booking Section */}
-      
+
       <section>
         <div className="bookings-container">
           <div className="tabs">
-            <div className={`tab ${activeTab === "bookings" ? "active" : ""}`}
-            onClick={()=> setActiveTab("bookings")}>My Bookings</div>
-            <div className={`tab ${activeTab === "settings" ? "active" : ""}`}
-            onClick={()=>setActiveTab('settings')}>Settings</div>
+            <div
+              className={`tab active`}
+            >
+              My Bookings
+            </div>
+            <div
+              className={`tab ${activeTab === "settings" ? "active" : ""}`}
+              onClick={() => setActiveTab("settings")}
+            >
+              Settings
+            </div>
           </div>
 
-        <div className="tab-content">
-          {/* Booking content */}
-          { activeTab === "bookings" && (
+          <div className="tab-content">
+            {/* Booking content */}
+              <div>
+                <h3 className="section-title">Upcoming Bookings</h3>
+
+                {bookings.map((item, index) => (
+                  <div className="booking-card" key={index}>
+                    <div className="booking-info">
+                      <strong>{item.studio}</strong>
+                      <p style={{ color: "#444" }}>
+                        {`Date: ${item.date}\u00A0\u00A0\u00A0\u00A0 Time: ${item.time}`}
+                      </p>
+                    </div>
+
+                    <div className="booking-requirements">
+                      <small>Technician Requirements</small>
+                      <p style={{ color: "#444" }}>{item.requirements}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>       
+          </div>
+
+          {/* Setting content */}
+          {activeTab === "settings" && (
             <div>
-          <h3 className="section-title">Upcoming Bookings</h3>
-
-           {bookings.map((item, index) => (
-            <div className="booking-card" key={index}>
-              <div className="booking-info">
-                <strong >{item.studio}</strong>
-                <p style={{color:"#444"}}>
-                  {`Date: ${item.date}\u00A0\u00A0\u00A0\u00A0 Time: ${item.time}`}
-                </p>
-              </div>
-
-              <div className="booking-requirements">
-                <small >Technician Requirements</small>
-                <p style={{color:"#444"}}>{item.requirements}</p>
-              </div>
+              <h3 className="section-title">Settings</h3>
             </div>
-          ))}
-          </div>
           )}
-          </div>
-        {/* Setting content */}
-        {activeTab === "settings" && (
-          <div>
-            <h3 className="section-title">Settings</h3>
-            </div>
-        )}
-
         </div>
       </section>
       <Nav_Links />
@@ -145,4 +150,4 @@ const Artist = () => {
   );
 };
 
-export default Artist;
+export default Technician;

@@ -1,14 +1,30 @@
 .profile-banner {
     width: 100%;
-    height: 55vh;
+    height: 65vh;
     background-image:
-        linear-gradient(to top,  rgba(0, 0, 0, 0.3) 80%),
-        url("/images/guitar-hero.png ");
+        linear-gradient(to top,  rgba(0, 0, 0, 0.3) 90%),
+        url("/images/banner1.png ");
        
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+}
+.profile-banner2 {
+   
+    background-image:
+        linear-gradient(to top,  rgba(0, 0, 0, 0.5) 90%),
+        url("/images/banner2.png ");
+       
+    
+}
+.profile-banner3 {
+   
+    background-image:
+        linear-gradient(to top,  rgba(0, 0, 0, 0.5) 90%),
+        url("/images/banner3.png ");
+       
+    
 }
 
 .profile-box {
@@ -18,21 +34,28 @@
     gap: 0.6rem;
     position: absolute;
     left: 10vw;
-    top: 45vh;
+    top: 56vh;
 }
 
 .profile-image {
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
-    background: url("/images/artist.png");
+    background: url("/images/artist_profile.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
+.profile-image2 {   
+    background: url("/images/technician_profile.png");
+    background-position: center center;
+}
+.profile-image3 {   
+    background: url("/images/owner_profile.png");
+    background-position: center center;
+}
 
 .profile-text {
-    align-self: center;
     color: #fff;
     font-weight: 600;
     letter-spacing: 2px;
@@ -46,7 +69,7 @@
 .about-container,
 .bookings-container {
     margin: 5rem 0;
-    padding: 0 3rem 0 9rem;
+    padding: 0 4rem 0 9rem;
 }
 
 .about {
@@ -61,8 +84,9 @@
 .about p {
     word-spacing: 1px;
     margin-bottom: .5rem;
-    line-height: 1.2rem;
-    font-weight: 500;
+    line-height: 1.4rem;
+  
+    font-weight: 600;
     color: #444;
 
 }
@@ -146,12 +170,12 @@
 
 .booking-info {
     width: 50%;
-    padding: 1rem 0rem 1rem 3rem;
+    padding: 1.2rem 0rem 1.2rem 3rem;
     font-weight: 500;
 }
 
 .booking-requirements {
-    padding: 1rem 3rem 1rem 0rem;
+    padding: 1.2rem 3rem 1.2rem 0rem;
     text-align: right;
     font-weight: 500;
 }
@@ -188,6 +212,17 @@
 
 }
 @media(max-width:630px){
+     .profile-box {
+        gap: 0;
+        left: 4vw;
+        top: 54vh;
+    }
+     .profile-box2 {
+        gap: 1rem;
+        left: 4vw;
+        top: 54vh;
+        
+    }
 
      .about-container,
     .bookings-container {
@@ -200,15 +235,18 @@
 }
 
 @media(max-width:580px) {
-    .profile-box {
-        gap: 0;
+   
+  .profile-box {
         left: 4vw;
-        top: 50vh;
+        top: 57vh;
     }
-
     .profile-image {
         width: 10rem;
         height: 10rem;
+    }
+    .profile-image2 {
+        width: 9rem;
+        height: 9rem;
     }
 
     .profile-text h1 {
@@ -227,41 +265,38 @@
         padding: 0 2rem 0 3rem;
     }
     .about p {
-    word-spacing: 0px;
-    line-height: 1.1rem;
+    word-spacing: 1px;
+      font-size:15px;
+    line-height: 1.3rem;
 }
-
-    
-    
-
 .booking-card {
     flex-direction:column;
 }
-}
-    
+
 .booking-info  {
     width: 100%;
     padding: 1rem 0rem 0.5rem 2rem;
-
-}
     
+}
+
 .booking-requirements{
- width: 100%;
+    width: 100%;
     padding: 0.5rem 0rem 1rem 2rem;
     text-align: left;
     
 }
+}
 
 @media(max-width:360px) {
     .profile-box {
-        gap: 0;
+        gap:0.5rem;
         left: 2vw;
-        top: 50vh;
+        top: 58vh;
     }
 
     .profile-text h1 {
         font-size: 1.2rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.2rem;
     }
 
     .social-box {
