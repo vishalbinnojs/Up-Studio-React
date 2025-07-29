@@ -32,7 +32,7 @@ const bookings = [
 ];
 
 const Artist = () => {
-  const [activeTab, setActiveTab] = useState("");
+  const [activeTab, setActiveTab] = useState("bookings");
   return (
     <>
       <Navbar />
@@ -49,7 +49,7 @@ const Artist = () => {
         <div className="about-container">
           <div className="about">
             <h2>About</h2>
-            <p>
+            <p >
               I'm a vocal artist with a deep passion for storytelling through
               music. My journey began in London, and over the years, I've
               explored styles ranging from soul and R&B to pop and experimental
@@ -102,7 +102,8 @@ const Artist = () => {
         <div className="bookings-container">
           <div className="tabs">
             <div
-              className={`tab active`}
+              className={`tab  ${activeTab === "bookings" ? "active" : ""}`}
+              onClick={()=> setActiveTab("bookings")}
             >
               My Bookings
             </div>
@@ -116,6 +117,7 @@ const Artist = () => {
 
           <div className="tab-content">
             {/* Booking content */}
+            {activeTab === "bookings" && (
               <div>
                 <h3 className="section-title">Upcoming Bookings</h3>
 
@@ -135,6 +137,7 @@ const Artist = () => {
                   </div>
                 ))}
               </div>
+            )}
           </div>
           
           {/* Setting content */}

@@ -3,7 +3,7 @@ import Home from "./components/Home/Home";
 import View from "./components/Home/View";
 import How_It_Works from "./components/How_It_Works/How_It_Works";
 import Features from "./components/Features/Features";
-import FAQs from "./components/FAQs/FAQs";
+import FAQs from "./components/FAQs/FAQs-Contact";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import About from "./components/About_Us/About";
@@ -27,7 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/howitworks" element={<How_It_Works />} />
         <Route path="/features" element={<Features />} />
-        <Route path="/FAQs" element={<FAQs />} />
+        <Route path="/FAQs-Contact" element={<FAQs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />

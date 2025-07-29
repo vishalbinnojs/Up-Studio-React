@@ -25,7 +25,7 @@ const Navbar = () => {
 useEffect(() => {
   if(location.pathname === '/' || location.pathname === '/about'){
     setIsTransparent(true);
-  }else{
+   }else{
     setIsTransparent(false);
   }
 }, [location]);
@@ -39,6 +39,7 @@ useEffect(() => {
   useEffect(() => {
     const handleClickOutside = (event) =>{
       if(navRef.current && !navRef.current.contains(event.target)){
+        // checks if navRef is attached to the DOM element nav && !navRef.current checks if click and scroll is not inside the nav element, otherwise it closes the menu. It should be outside the nav element.
         setIsOpen(false);
       }
     };
@@ -52,9 +53,8 @@ useEffect(() => {
       
     }
   }, [])
-  
-  
-  return (
+
+    return (
     <>
     
      <nav ref={navRef} className = {`navbar ${isTransparent ? 'transparent':'white'}`}>
@@ -62,14 +62,14 @@ useEffect(() => {
         <img src={Logo} alt="logo" />
       </div>
       <div className ={`links ${isOpen ? 'show':''}`}>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/') ? 'active':''}` } href="/" onClick={()=>setIsOpen(false)}>Home</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/howitworks') ? 'active':''}`} href="/howitworks" onClick={()=>setIsOpen(false)}>How It Works</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/featrues') ? 'active':''}`} href="/features" onClick={()=>setIsOpen(false)}>Features</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/FAQs') ? 'active':''}`} href="/FAQs" onClick={()=>setIsOpen(false)}>FAQs</a>
+        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/') ? 'active':''}` } href="/" >Home</a>
+        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/howitworks') ? 'active':''}`} href="/howitworks" >How It Works</a>
+        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/featrues') ? 'active':''}`} href="/features" >Features</a>
+        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/FAQs-Contact') ? 'active':''}`} href="/FAQs-Contact" >FAQs</a>
       </div>
       <div className={`auth ${isOpen ? 'show':''}`}>
-        <a href="/login" onClick={()=>setIsOpen(false)}><button className="login">Login</button></a>
-         <a href="/signup" onClick={()=>setIsOpen(false)}><button className="signup">SignUp</button></a>  
+        <a href="/login" ><button className="login">Login</button></a>
+         <a href="/signup" ><button className="signup">SignUp</button></a>  
         <div>
           <a className="profile-link" href="#">
             <i 

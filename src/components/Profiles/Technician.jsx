@@ -32,7 +32,7 @@ const bookings = [
 ];
 
 const Technician = () => {
-  const [activeTab, setActiveTab] = useState("");
+  const [activeTab, setActiveTab] = useState("bookings");
   return (
     <>
       <Navbar />
@@ -102,7 +102,8 @@ const Technician = () => {
         <div className="bookings-container">
           <div className="tabs">
             <div
-              className={`tab active`}
+              className={`tab ${activeTab === "bookings" ? "active" : ""}`}
+              onClick={() => setActiveTab("bookings")}
             >
               My Bookings
             </div>
@@ -116,6 +117,7 @@ const Technician = () => {
 
           <div className="tab-content">
             {/* Booking content */}
+          {activeTab === "bookings" && (
               <div>
                 <h3 className="section-title">Upcoming Bookings</h3>
 
@@ -134,7 +136,8 @@ const Technician = () => {
                     </div>
                   </div>
                 ))}
-              </div>       
+              </div>  
+              )}     
           </div>
 
           {/* Setting content */}

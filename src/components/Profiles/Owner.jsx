@@ -98,7 +98,8 @@ Let s bring your vision to life.
         <div className="bookings-container">
           <div className="tabs">
             <div
-              className={`tab active`}
+              className={`tab ${activeTab === "bookings" ? "active" : ""}`}
+              onClick={() => setActiveTab("bookings")}
             >
               My Bookings
             </div>
@@ -112,6 +113,7 @@ Let s bring your vision to life.
 
           <div className="tab-content">
             {/* Booking content */}
+            {activeTab === "bookings" && (
               <div>
                 <h3 className="section-title">Upcoming Bookings</h3>
 
@@ -130,7 +132,8 @@ Let s bring your vision to life.
                     </div>
                   </div>
                 ))}
-              </div>    
+              </div>  
+              )}  
           </div>
 
           {/* Setting content */}
