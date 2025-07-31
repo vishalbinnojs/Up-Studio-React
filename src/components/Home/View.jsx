@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import Nav_Links from "./Nav_Links";
 import "./View.css";
 
 
@@ -140,7 +139,7 @@ const StudioCard = ({ image, name, rating, reviews, price }) => {
   return (
     <div className="studio-card">
       <div className="image-wrapper">
-      <img src={image} alt={name} className="studio-image" />
+      <img src={image} alt={name} className="studio-image" loading="lazy"/>
 <div className="studio-overlay"></div>
       </div>
       <div className="studio-details">
@@ -171,7 +170,7 @@ function View() {
         ))}
       </div>
     </div>
-    <Nav_Links />
+    
 
     </>
   )

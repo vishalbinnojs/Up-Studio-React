@@ -6,7 +6,6 @@ import message from "../../assets/faq-message.png";
 import location from "../../assets/faq-location.png";
 import time from "../../assets/faq-time.png";
 
-import Nav_Links from "../Home/Nav_Links";
 
 const contactInfo = [
   {
@@ -76,7 +75,7 @@ const FAQs = () => {
           </form>
         </div>
       </div>
-      <Nav_Links />
+    
     </>
   );
 };

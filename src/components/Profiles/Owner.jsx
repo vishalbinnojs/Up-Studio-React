@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Artist.css";
 import Navbar from "../Navbar/Navbar";
-import Nav_Links from "../Home/Nav_Links";
+
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -144,7 +144,7 @@ Let s bring your vision to life.
           )}
         </div>
       </section>
-      <Nav_Links />
+
     </>
   );
 };

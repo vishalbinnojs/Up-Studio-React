@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
+import Nav_Links  from "./components/Home/Nav_Links";
 import Home from "./components/Home/Home";
 import View from "./components/Home/View";
 import How_It_Works from "./components/How_It_Works/How_It_Works";
@@ -10,6 +11,7 @@ import About from "./components/About_Us/About";
 import Artist from "./components/Profiles/Artist";
 import Technician from "./components/Profiles/Technician";
 import Owner from "./components/Profiles/Owner";
+import PaymentMain from "./components/PaymentGateway/PaymentMain"
 import Footer from "./components/Footer/Footer";
 
 
@@ -20,6 +22,8 @@ function App() {
   // hiding footer on below pages
   const hideFooterPaths = ["/login", "/signup"];
   const shouldHideFooter = hideFooterPaths.includes(location.pathname);
+  const hideNavLinks = hideFooterPaths.includes(location.pathname)
+
 
   return (
     <>
@@ -35,7 +39,10 @@ function App() {
         <Route path="/view" element ={<View />} />
         <Route path="/technician" element={<Technician />} />
         <Route path = "/owner" element={<Owner/>} />
+        <Route path = '/payment' element={<PaymentMain/>} />
       </Routes>
+          {/* Hide NavLinks */}
+   {!hideNavLinks && <Nav_Links />}
           {/* Hide Footer */}
       {!shouldHideFooter && <Footer />}
     </>

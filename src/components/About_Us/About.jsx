@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import Nav_Links from "../Home/Nav_Links";
+// import Nav_Links from "../Home/Nav_Links";
 import "./About.css";
 const About = () => {
   return (
@@ -89,7 +89,7 @@ const About = () => {
 
                   {/* *********************  Links Navigation Section ****************** */}  
             
-            <Nav_Links />
+            {/* <Nav_Links /> */}
     </>
   );
 };

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
 
-import Nav_Links from "./Nav_Links";
+
 import "./Home.css";
 
 const Home = () => {
@@ -366,7 +366,7 @@ const Home = () => {
 
         {/* *********************  Links Navigation Section ****************** */}
 
-        <Nav_Links />
+        
       </main>
     </>
   );

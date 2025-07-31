@@ -26,7 +26,7 @@ const Nav_Links = () => {
             <li><a href="/howitworks">How It Works</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Blog/News</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/FAQs-Contact">Contact</a></li>
             
         </ul>
     </div>
@@ -35,9 +35,9 @@ const Nav_Links = () => {
             Explore
         </h5>
         <ul>
-            <li><a href="#">Browse Studios</a></li>
-            <li><a href="#">Browse Technicians</a></li>
-            <li><a href="#">Browse Artists</a></li>
+            <li><a href="/view">Browse Studios</a></li>
+            <li><a href="/technician">Browse Technicians</a></li>
+            <li><a href="artist">Browse Artists</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Popular Locations</a></li>
             

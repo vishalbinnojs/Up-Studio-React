@@ -1,7 +1,6 @@
 import React from "react";
 import "./How_It_Works.css";
 import Navbar from "../Navbar/Navbar";
-import Nav_Links from "../Home/Nav_Links";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faGear,faFolderOpen,faWrench,faHandshake,faMagnifyingGlass,faUsers, faCalendarDays,faBuilding } from '@fortawesome/free-solid-svg-icons';
@@ -63,7 +62,7 @@ const How_It_Works = () => {
         <img src="/images/booking-flow.png" alt="booking flow" />
       </section>
 
-      <Nav_Links />
+      
     </>
   );
 };
