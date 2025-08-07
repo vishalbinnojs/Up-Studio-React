@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 import logo1 from "../../assets/logo1.png";
 import "./Login.css";
 const Login = () => {
@@ -39,7 +40,7 @@ const Login = () => {
                   <span className="checkmark"></span>
                   Remember Me
                 </label>
-                <a href="#">Forgot Password?</a>
+                <Link to="#">Forgot Password?</Link>
               </div>
 
               <button type="submit" className="login-btn">
@@ -49,12 +50,12 @@ const Login = () => {
             <h6 className="login-with">
               <span>Or login with</span>
             </h6>
-            <a className="google-login" href="#">
+            <Link className="google-login" to="#">
               <img src="/images/google-icon.svg" alt="Google logo" />
               Google
-            </a>
+            </Link>
             <p className="p-text">
-              Don’t have account? <a href="/signup">SignUp now</a>
+              Don’t have account? <Link to="/signup">SignUp now</Link>
             </p>
           </div>
         </div>

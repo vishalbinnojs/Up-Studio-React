@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import {Link} from "react-router-dom";
 import logo1 from "../../assets/logo1.png";
 import "./Signup.css";
 import Dropdown from "./Dropdown";
@@ -47,7 +48,7 @@ const Signup = () => {
             </form>
            
             <p className="p-text">
-              By clicking 'Sign up' you are in agreement with our <a href="">Terms of use</a>.
+              By clicking 'Sign up' you are in agreement with our <Link to="#">Terms of use</Link>.
             </p>
           </div>
         </div>

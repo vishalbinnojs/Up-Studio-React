@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 import Logo2 from "../../assets/Logo2.png"
 import "./Nav_Links.css";
 
@@ -22,11 +23,11 @@ const Nav_Links = () => {
             Company
         </h5>
         <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/howitworks">How It Works</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Blog/News</a></li>
-            <li><a href="/FAQs-Contact">Contact</a></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/howitworks">How It Works</Link></li>
+            <li><Link to="#">Careers</Link></li>
+            <li><Link to="#">Blog/News</Link></li>
+            <li><Link to="/FAQs-Contact">Contact</Link></li>
             
         </ul>
     </div>
@@ -35,11 +36,11 @@ const Nav_Links = () => {
             Explore
         </h5>
         <ul>
-            <li><a href="/view">Browse Studios</a></li>
-            <li><a href="/technician">Browse Technicians</a></li>
-            <li><a href="artist">Browse Artists</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Popular Locations</a></li>
+            <li><Link to="/view">Browse Studios</Link></li>
+            <li><Link to="/technician">Browse Technicians</Link></li>
+            <li><Link to="artist">Browse Artists</Link></li>
+            <li><Link to="#">Search</Link></li>
+            <li><Link to="#">Popular Locations</Link></li>
             
         </ul>
     </div>
@@ -54,9 +55,9 @@ const Nav_Links = () => {
             news
         </p>
         <div className="social-media">
-      <a href="https://www.instagram.com/" target="_blank"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
-      <a href="https://www.facebook.com/" target='_blank'><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
-      <a href="https://www.gmail.com/" target="_blank"><FontAwesomeIcon icon={faEnvelope} size="lg" /></a>
+      <Link to="https://www.instagram.com/" target="_blank"><FontAwesomeIcon icon={faInstagram} size="lg"/></Link>
+      <Link to="https://www.facebook.com/" target='_blank'><FontAwesomeIcon icon={faFacebook} size="lg" /></Link>
+      <Link to="https://www.gmail.com/" target="_blank"><FontAwesomeIcon icon={faEnvelope} size="lg" /></Link>
       
         </div>
         

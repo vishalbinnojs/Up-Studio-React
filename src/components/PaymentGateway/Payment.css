@@ -1,7 +1,7 @@
 .payment-banner {
     width: 100%;
     min-height: 100vh;
-    position:relative;
+    position: relative;
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.1)),
         url("/images/payment-banner.png ");
@@ -17,8 +17,8 @@
 }
 
 .payment-section h2 {
-    letter-spacing:1px;
-    margin-bottom:4rem;
+    letter-spacing: 1px;
+    margin-bottom: 4rem;
     text-align: center;
     text-shadow: 0 0 1px #111;
     color: transparent;
@@ -26,9 +26,9 @@
 
 .payment-container {
     padding: 1rem 2rem;
-    display:flex;
-    justify-content:center;
-    gap:1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .payment-container .studio-details {
@@ -80,12 +80,13 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size:12px;
+    font-size: 12px;
 
 }
-.more-details .services a{
-    text-decoration:none;
-    color:var(--primarycolor);
+
+.more-details .services a {
+    text-decoration: none;
+    color: var(--primarycolor);
 }
 
 #price-tag {
@@ -119,10 +120,11 @@
     font-weight: 600;
     line-height: 1.2rem;
     letter-spacing: 1px;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
 }
-.studio-btns .same-style:hover{
-    background-color:var(--btnHoverBgColor);
+
+.payment-container .studio-details .studio-btns .same-style:hover {
+    background: var(--btnHoverBgColor);
 }
 
 #opaque-btn {
@@ -131,78 +133,185 @@
 
 /* pay with debit or credit card */
 
-.form-section{
+.form-section {
     border: 3px solid var(--inputBgColor);
-    border-radius:1.5rem;
-    padding:1.5rem 3rem 0rem;
-    width:50%;
-}
-.form-section .form-group{
-    width:100%;
-    
-}
-.form-section form .form-group input{
-    width:100%;
-    padding:1.3rem;
-    background:var(--inputBgColor);
-    border-radius:2rem;
-    margin-bottom:1.5rem;
-    outline:none;
-    border:none;
-}
-.form-section form .form-group input::placeholder{
-    font-size:0.8rem;
-    font-weight:700;
-    color:#888;
+    border-radius: 1.5rem;
+    padding: 1.5rem 3rem 0rem;
+    width: 50%;
 }
 
-.form-section form h3{
-    margin-bottom:.6rem;
-}
-.form-section form .date-group{
-    display:flex;
-    justify-content:center;
-    gap:.1rem;
-}
-.date-group .form-group input{
-    width:50%;
-}
-.payment-btn-container{
-    text-align:center;
-    padding:0rem 4rem;
-    margin-top:0.8rem;
-}
-#pay-button{
-width:50%;
-padding: 1.5rem 3rem;
-background:var(--primaryColorBackground);
-border:none;
-border-radius:4px;
-outline:none;
-cursor:pointer;
-color:white;
-font-size:1.5rem;
-font-weight:600;
+.form-section .form-group {
+    width: 100%;
 
 }
 
-@media(max-width:1024px){
-    .payment-container{
-        padding:1rem 0rem;
+.form-section form .form-group input {
+    width: 100%;
+    padding: 1.3rem;
+    background: var(--inputBgColor);
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    outline: none;
+    border: none;
+}
+
+.form-section form .form-group input::placeholder {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #888;
+    transition: color 0.5s ease;
+}
+
+.form-section form .form-group input:focus::placeholder {
+    color: transparent;
+}
+
+.form-section form h3 {
+    margin-bottom: .6rem;
+}
+
+.form-section form .date-group {
+    display: flex;
+    justify-content: center;
+    gap: .1rem;
+}
+
+.date-group .form-group input {
+    width: 50%;
+}
+
+.payment-btn-container {
+    text-align: center;
+    padding: 0rem 4rem;
+    margin-top: 0.8rem;
+}
+
+#pay-button {
+    width: 50%;
+    padding: 1.5rem 3rem;
+    background: var(--primaryColorBackground);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+#pay-button:hover {
+    transition: background 0.3s ease;
+    background: var(--btnHoverBgColor);
+}
+
+@media(max-width:1024px) {
+    .payment-container {
+        padding: 1rem 0rem;
+    }
+
+    #pay-button {
+        width: 50%;
+        padding: 1.2rem 2.5rem;
+    }
+
+    .payment-container .studio-details {
+        padding: 2.5rem 2rem 5.5rem 2rem;
+    }
+
+    .form-section {
+        padding: 1.2rem 2rem 0rem;
+    }
+}
+
+@media(max-width:850px) {
+    .payment-container .studio-details {
+        padding: 2.5rem 1.3rem 5rem 1.3rem;
+    }
+
+    .form-section {
+        padding: 1.2rem 1.5rem 0rem;
     }
     #pay-button{
-width:50%;
-padding: 1.2rem 2.5rem;
-
-
+        width:60%;
+    }
 }
-.payment-container .studio-details {
-   
-    padding: 2.5rem 2rem 5.5rem 2rem;
+
+@media(max-width:768px) {
+    .payment-container {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
     
+    
+    .payment-container .studio-details {
+        width: 100%;
+        padding: 3rem 2.5rem 6rem 2.5rem;
+        
+    }
+    
+    .form-section {
+        width: 100%;
+        padding: 1.5rem 3rem 0rem;
+    }
+     #pay-button{
+        font-size:1.3rem;
+    }
 }
-.form-section{
-    padding:1.2rem 2rem 0rem;
+@media(max-width:600px){
+    .payment-section{
+        margin:3.5rem 2rem;
+    }
+    .payment-container{
+        padding:1rem 1.5rem;
+    }
+    .payment-container .studio-details {
+        padding: 3rem 2rem 5rem 2rem;
+        
+    }
+    .payment-section h2{
+        margin-bottom:2.5rem;
+    }
+        
+    .form-section {
+       
+        padding: 1.2rem 2rem 0rem;
+    }
+     #pay-button{
+        width:100%;
+        padding:1rem 2rem;
+    }
 }
-
+@media(max-width:480px){
+ .payment-section{
+        margin:3.5rem 0rem;
+    }
+    .payment-container .studio-details .studio-btns .same-style {
+        padding:1rem 1.5rem;
+    }
+}
+@media(max-width:380px){
+ .payment-container .studio-details {
+        padding: 3rem 1rem 5rem 1rem;
+    }
+     .payment-container .studio-details .studio-btns .same-style {
+        padding:0.8rem 1rem;
+    }
+        
+    .payment-section h2{
+        margin-bottom:2rem;
+    }   
+    .form-section {
+        padding: 1.2rem 1rem 0rem; 
+    }
+    .payment-btn-container{
+padding:0rem 2rem;
+    }
+     #pay-button{
+        
+        padding:1rem 1.5rem;
+    }
+    
+       
 }

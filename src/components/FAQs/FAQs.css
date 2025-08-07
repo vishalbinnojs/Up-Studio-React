@@ -13,7 +13,7 @@
 }
 .contact-us-container{
     letter-spacing:1px;
-    padding:2.5rem 12rem 2rem;
+    padding:2.5rem 12rem ;
 }
 .contact-us-container h1{
     margin-bottom:1.2rem;
@@ -60,12 +60,11 @@
 }
 .contact-form-container h2{
     padding-bottom:2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-.contact-form-container h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -183,7 +182,7 @@
     }
     .contact-container h2{
         text-align:center;
-        margin-bottom:3rem;
+        margin-bottom:1rem;
     }
     .contact--form-container{
         align-self:center;
@@ -194,7 +193,32 @@
 }
 
 @media(max-width:425px){
-    .contact-us-container, .main-container{
-        padding:1rem
+      .contact-us-container h1{
+        margin-bottom:1rem;
     }
+    .main-container{
+        padding:1rem;
+    }
+ .contact-container{
+  gap:1rem;
 }
+.contact-form-container h2{
+    margin:0;
+}
+
+.contact-form .ip-box{
+    margin-bottom:0;
+}
+      
+.contact-form label {
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1.1rem 1rem;
+    font-size: 0.8rem;
+}
+}
+  
+  

@@ -13,7 +13,7 @@ import Technician from "./components/Profiles/Technician";
 import Owner from "./components/Profiles/Owner";
 import PaymentMain from "./components/PaymentGateway/PaymentMain"
 import Footer from "./components/Footer/Footer";
-
+import Counter from "./components/Counter";
 
 import "./App.css";
 
@@ -40,6 +40,7 @@ function App() {
         <Route path="/technician" element={<Technician />} />
         <Route path = "/owner" element={<Owner/>} />
         <Route path = '/payment' element={<PaymentMain/>} />
+        <Route path = '/counter-app' element={<Counter/>} />
       </Routes>
           {/* Hide NavLinks */}
    {!hideNavLinks && <Nav_Links />}

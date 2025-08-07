@@ -1,10 +1,124 @@
 import React from "react";
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-
-
+import StudioCard from "./StudioCard";
 import "./Home.css";
+
+const studioList = [
+  {
+    id: 1,
+    name: "Icon Studio Inn",
+    price: 99,
+    rating: 5,
+    reviews: 68,
+    image: "/images/Studio 1.png",
+  },
+  {
+    id: 2,
+    name: "Diamond Studio",
+    price: 99,
+    rating: 5,
+    reviews: 68,
+    image: "/images/Studio 2.png",
+  },
+  {
+    id: 3,
+    name: "Ruby Studio",
+    price: 99,
+    rating: 5,
+    reviews: 68,
+    image: "/images/Studio 5.png",
+  },
+];
+
+const ratingList = [
+  {
+    id: 1,
+    text1: "Alex,",
+    text2: "Rap Artist",
+    rating: 5,
+    para: '"Finally a platform that gets how artists, engineers, and studios work together. Booking is smoother than ever!"',
+    img: "/images/quotes-icon.png",
+  },
+  {
+    id: 2,
+    text1: "Nina,",
+    text2: "Sound Technician",
+    rating: 5,
+    para: `"I used to spend hours coordinating sessions. Now it's just a few clicks and I'm booked!"`,
+    img: "/images/quotes-icon.png",
+  },
+  {
+    id: 3,
+    text1: "Diamond Studio,",
+    text2: "Studio Owner",
+    rating: 5,
+    para: '"This helps us keep our studio calender full and manage all incoming requests in one place."',
+    img: "/images/quotes-icon.png",
+  },
+];
+
+const RatingCard = ({ text1, text2, rating, para, img }) => {
+  return (
+    <>
+      <div className="box">
+        <div className="content-box2">
+          <div className="rate">
+            <span style={{ display: "block" }}>
+              <span className="star">{"★".repeat(Math.floor(rating))}</span>
+            </span>
+            <h6>
+              {text1}
+              <span style={{ fontSize: "1em", fontWeight: "500" }}>
+                {" "}
+                {text2}
+              </span>
+            </h6>
+          </div>
+          <img src={img} alt="quotes" />
+        </div>
+        <p>{para}</p>
+      </div>
+    </>
+  );
+};
+
+const bookingList = [
+  {
+    id: 1,
+    img: "/images/music-icon.png",
+    title: "Step 1: The Artist Starts",
+    desc: " Artists search for available studios based on the date, time and gear. They request to join a session or create a new one.",
+  },
+  {
+    id: 2,
+    img: "/images/headphone-icon.png",
+    title: "Step 2: The Technician Joins",
+    desc: "Technicians explore sessions that havean artist or available slots. They accept and request to join the same session.",
+  },
+  {
+    id: 3,
+    img: "/images/todo-icon.png",
+    title: "Step 3: The Studio Syncs",
+    desc: "Once a studio, artist, and technician are all matched in the same time slot, the session is auto confirmed or manually approved by the studio.",
+  },
+];
+console.log(bookingList);
+
+const BookingCard = ({ img, title, desc }) => {
+  return (
+    <>
+      
+      <div className="box">
+        <div className="img-box">
+          <img src={img} alt="" />
+        </div>
+        <h5>{title}</h5>
+        <p>{desc}</p>
+      </div>
+    </>
+  );
+};
 
 const Home = () => {
   return (
@@ -14,7 +128,7 @@ const Home = () => {
         <div className="hero">
           <div className="search-Container">
             <div className="text">
-              <h2>Where Artists, Technicians & Studios Meet to Create</h2>
+              <h1>Where Artists, Technicians & Studios Meet to Create</h1>
               <p className="para">
                 Book your next creative session - smart,synchronized, and
                 studio-ready.
@@ -31,7 +145,7 @@ const Home = () => {
                 />
               </div>
 
-              <div className="divider"></div>
+              <div className="divider">fdvf</div>
 
               <div className="search-field">
                 <i className="ri-calendar-2-line"></i>
@@ -62,94 +176,21 @@ const Home = () => {
         {/*   ************  Studio Box Section ***************   */}
         <section className="studio-box">
           <div className="title">
-            <h3>Our Feature Listing</h3>
-            <Link to="/view">View All</Link>
+            <h2>Our Feature Listing</h2>
+            <Link to="/view" title="see more">
+              View All
+            </Link>
           </div>
           <div className="studio-items-box">
-            <div className="item item1">
-              <div className="img-box">
-                <img src="/images/Studio 1.png" alt="Icon Studio Inn" />
-              </div>
-              <div className="detail-box">
-                <div className="rating-box">
-                  <span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    (5)
-                  </span>
-                  <span className="rating">68 Ratings</span>
-                </div>
-                <div className="studio-info">
-                  <h5>Icon Studio Inn</h5>
-                  <p>
-                    Artists search for available studios based on date, time and
-                    gear. They request to join a session or create a new one.
-                  </p>
-                  <h6>{"\u20AC"} 99.00</h6>
-                </div>
-              </div>
-            </div>
-
-            <div className="item item2">
-              <div className="img-box">
-                <img src="/images/Studio 2.png" alt="Soundlab Studio" />
-              </div>
-              <div className="detail-box">
-                <div className="rating-box">
-                  <span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    (5)
-                  </span>
-                  <span className="rating">68 Ratings</span>
-                </div>
-                <div className="studio-info">
-                  <h5>Soundlab Studios</h5>
-                  <p>
-                    Artists search for available studios based on date, time and
-                    gear. They request to join a session or create a new one.
-                  </p>
-                  <h6>{"\u20AC"} 99.00</h6>
-                </div>
-              </div>
-            </div>
-            <div className="item item3">
-              <div className="img-box">
-                <img src="/images/Studio 1.png" alt="Diamond Studio" />
-              </div>
-              <div className="detail-box">
-                <div className="rating-box">
-                  <span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    (5)
-                  </span>
-                  <span className="rating">68 Ratings</span>
-                </div>
-                <div className="studio-info">
-                  <h5>Diamond Studio</h5>
-                  <p>
-                    Artists search for available studios based on date, time and
-                    gear. They request to join a session or create a new one.
-                  </p>
-                  <h6>{"\u20AC"} 99.00</h6>
-                </div>
-              </div>
-            </div>
+            {studioList.map((studio) => (
+              <StudioCard key={studio.id} {...studio} />
+            ))}
           </div>
         </section>
+
         {/* ************  features section  ************** */}
         <section className="features">
-          <h3>More Than a Booking Tool - It's a Creative Network</h3>
+          <h2>More Than a Booking Tool - It's a Creative Network</h2>
           <div className="content-box">
             <div className="content1">
               <div className="txts">
@@ -235,138 +276,29 @@ const Home = () => {
           </div>
         </section>
 
-        {/* ***********  booking section  ************ */}
+        {/* ***********  Booking section  ************ */}
 
         <section className="booking-box">
-          <h3>How Booking Works - Smart, Synchronized, Seamless</h3>
+          <h2>How Booking Works - Smart, Synchronized, Seamless</h2>
           <div className="main-box">
-            <div className="box">
-              <div className="img-box">
-                <img src="/images/music-icon.png" alt="" />
-              </div>
-
-              <h5>Step 1: The Artist Starts</h5>
-
-              <p>
-                Artists search for available studios based on the date, time and
-                gear. They request to join a session or create a new one.
-              </p>
-            </div>
-
-            <div className="box">
-              <div className="img-box">
-                <img src="/images/headphone-icon.png" alt="" />
-              </div>
-
-              <h5>Step 1: The Technician Joins</h5>
-
-              <p>
-                Technicians explore sessions that have an artist or available
-                slots. They accept and request to join the same session.
-              </p>
-            </div>
-            <div className="box">
-              <div className="img-box">
-                <img src="/images/todo-icon.png" alt="" />
-              </div>
-
-              <h5>Step 1: The Artist Starts</h5>
-
-              <p>
-                Once a studio,artist, and technician are all matched in the same
-                time slot, the session is auto-confirmed or maually approved by
-                the studio.
-              </p>
-            </div>
+            {bookingList.map((booking) => {
+              return <BookingCard key={booking.id} {...booking} />;
+            })}
           </div>
         </section>
+      
         {/* *****************  Rating Section********************** */}
+
         <section className="rating-section">
-          <h3>Trusted by Creators & Studios Alike</h3>
+          <h2>Trusted by Creators & Studios Alike</h2>
           <div className="rating-box">
-            <div className="box">
-              <div className="content-box2">
-                <div className="rate">
-                  <span style={{ display: "block" }}>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                  </span>
-                  <h6>
-                    Alex,
-                    <span style={{ fontSize: "1em", fontWeight: "400" }}>
-                      Rap Artist
-                    </span>
-                  </h6>
-                </div>
-
-                <img src="/images/quotes-icon.png" alt="" />
-              </div>
-              <p>
-                "Finally a platform that gets how artists, engineers, and
-                studios work together. Booking is smoother than ever!"
-              </p>
-            </div>
-
-            <div className="box">
-              <div className="content-box2">
-                <div className="rate">
-                  <span style={{ display: "block" }}>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                  </span>
-                  <h6>
-                    Nina,
-                    <span style={{ fontSize: "1em", fontWeight: "400" }}>
-                      Sound Technician
-                    </span>
-                  </h6>
-                </div>
-
-                <img src="/images/quotes-icon.png" alt="" />
-              </div>
-              <p>
-                "I used to spend hours coordinating sessions. Now it's just a
-                few clicks and I'm booked!"
-              </p>
-            </div>
-
-            <div className="box">
-              <div className="content-box2">
-                <div className="rate">
-                  <span style={{ display: "block" }}>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                    <span className="fa fa-star checked"></span>
-                  </span>
-                  <h6>
-                    Diamond Studios,
-                    <span style={{ fontSize: "1em", fontWeight: "400" }}>
-                      Studio Owner
-                    </span>
-                  </h6>
-                </div>
-
-                <img src="/images/quotes-icon.png" alt="" />
-              </div>
-              <p>
-                "This helps us keep our studio calender full and manage all
-                incoming requests in one place."
-              </p>
-            </div>
+            {ratingList.map((rating) => (
+              <RatingCard key={rating.id} {...rating} />
+            ))}
           </div>
         </section>
 
         {/* *********************  Links Navigation Section ****************** */}
-
-        
       </main>
     </>
   );

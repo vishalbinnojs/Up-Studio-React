@@ -1,4 +1,5 @@
 import React, { useState,useRef, useEffect } from "react";
+import {Link} from "react-router-dom"
 import {useLocation} from "react-router-dom";
 import logo1 from "../../assets/logo1.png";
 import logo2 from "../../assets/logo2.png";
@@ -62,19 +63,19 @@ useEffect(() => {
         <img src={Logo} alt="logo" />
       </div>
       <div className ={`links ${isOpen ? 'show':''}`}>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/') ? 'active':''}` } href="/" >Home</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/howitworks') ? 'active':''}`} href="/howitworks" >How It Works</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/featrues') ? 'active':''}`} href="/features" >Features</a>
-        <a className ={`${isTransparent ? 'white':'black'} ${isActive('/FAQs-Contact') ? 'active':''}`} href="/FAQs-Contact" >FAQs</a>
+        <Link className ={`${isTransparent ? 'white':'black'} ${isActive('/') ? 'active':''}` } to="/" >Home</Link>
+        <Link className ={`${isTransparent ? 'white':'black'} ${isActive('/howitworks') ? 'active':''}`} to="/howitworks" >How It Works</Link>
+        <Link className ={`${isTransparent ? 'white':'black'} ${isActive('/featrues') ? 'active':''}`} to="/features" >Features</Link>
+        <Link className ={`${isTransparent ? 'white':'black'} ${isActive('/FAQs-Contact') ? 'active':''}`} to="/FAQs-Contact" >FAQs</Link>
       </div>
       <div className={`auth ${isOpen ? 'show':''}`}>
-        <a href="/login" ><button className="login">Login</button></a>
-         <a href="/signup" ><button className="signup">SignUp</button></a>  
+        <Link to="/login" ><button className="login">Login</button></Link>
+         <Link to="/signup" ><button className="signup">SignUp</button></Link>  
         <div>
-          <a className="profile-link" href="#">
+          <Link className="profile-link" to="#">
             <i 
               className="ri-account-circle-line profile-img"></i>
-            </a>
+            </Link>
         </div>
       </div>
       <i className="ri-menu-fold-line" id="menu-toggle" onClick={toggleMenu}></i>

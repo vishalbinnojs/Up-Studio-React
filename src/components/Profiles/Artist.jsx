@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 import "./Artist.css";
 import Navbar from "../Navbar/Navbar";
 
@@ -71,7 +72,7 @@ const Artist = () => {
                   size="xl"
                 />
 
-                <a href="#">SarahSmithArtist_spotify</a>
+                <Link to="#">SarahSmithArtist_spotify</Link>
               </div>
 
               <div className="social-item item-2">
@@ -80,7 +81,7 @@ const Artist = () => {
                   style={{ color: "purple", marginRight: "1rem" }}
                   size="xl"
                 />
-                <a href="#">SarahSmith_instagram</a>
+                <Link to="#">SarahSmith_instagram</Link>
               </div>
 
               <div className="social-item">
@@ -89,7 +90,7 @@ const Artist = () => {
                   style={{ color: "red", marginRight: "0.6rem" }}
                   size="xl"
                 />
-                <a href="#">SarahSmith_youtube</a>
+                <Link to="#">SarahSmith_youtube</Link>
               </div>
             </div>
           </div>

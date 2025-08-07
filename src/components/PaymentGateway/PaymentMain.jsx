@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./Payment.css";
 import Navbar from "../Navbar/Navbar";
 const PaymentMain = () => {
@@ -16,7 +17,7 @@ const PaymentMain = () => {
             <div className="img-box">
               <img src="/images/Studio 1.png" alt="Icon Studio Inn" />
               <div className="text-box">
-                <span className="deal">Recommended Deal</span>
+                <span className="deal">Recommend-ed Deal</span>
                 <h5>Icon Studio Inn</h5>
               </div>
             </div>
@@ -24,7 +25,7 @@ const PaymentMain = () => {
               <div className="services">
                 <span style={{ color: "red" }}>Non-refundable</span>
                 <span>Complimentary Wifi</span>
-                <a href="">More Details</a>
+                <Link to="#">More Details</Link>
               </div>
               <div className="services" id="price-tag">
                 <span className="price">€ 109.63 Eur</span>
@@ -80,7 +81,7 @@ const PaymentMain = () => {
           </div>
         </div>
                <div className="payment-btn-container">
-        <button id="pay-button">{`PAY \u00A0\u00A0\u00A0\u00A0 € 103.63 Eur`}</button>
+        <button id="pay-button">{`PAY \u00A0\u00A0\u00A0 € 103.63 Eur`}</button>
                 </div>
       </section>
     </>

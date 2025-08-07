@@ -1,21 +1,4 @@
-.studios-page {
-  padding: 2rem;
-  margin:5rem 0rem 2rem 0rem;
-}
-
-.title {
-  color:#111;
-  margin-bottom: 2rem;
-}
-
-
-.studio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-/* .studio-card {
+.studio-card {
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -82,4 +65,13 @@
 .studio-price {
   font-weight: bold;
   margin-top: 0.5rem;
-} */
+}
+
+@media(max-width:480px){
+  .studio-details .studio-name{
+    font-size:1rem;
+  }
+  .studio-details .studio-price{
+    font-size:0.8rem;
+  }
+}

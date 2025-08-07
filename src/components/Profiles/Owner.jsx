@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 import "./Artist.css";
 import Navbar from "../Navbar/Navbar";
 
@@ -67,7 +68,7 @@ Let s bring your vision to life.
                   size="xl"
                 />
 
-                <a href="#">BredanEich_spotify</a>
+                <Link to="#">BredanEich_spotify</Link>
               </div>
 
               <div className="social-item item-2">
@@ -76,7 +77,7 @@ Let s bring your vision to life.
                   style={{ color: "purple", marginRight: "1rem" }}
                   size="xl"
                 />
-                <a href="#">BredanEich_instagram</a>
+                <Link to="#">BredanEich_instagram</Link>
               </div>
 
               <div className="social-item">
@@ -85,7 +86,7 @@ Let s bring your vision to life.
                   style={{ color: "red", marginRight: "0.6rem" }}
                   size="xl"
                 />
-                <a href="#">BredanEich_youtube</a>
+                <Link to="#">BredanEich_youtube</Link>
               </div>
             </div>
           </div>
