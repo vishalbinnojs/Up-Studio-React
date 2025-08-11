@@ -1,14 +1,50 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-// import Nav_Links from "../Home/Nav_Links";
 import "./About.css";
+
+const offerList = [
+  {   id:1,
+      title:"Artist",
+      text1:"Discover studios that fit your vibe and your budget.",
+      text2:"Book sessions with Confidence.",
+      img:"/images/artist-symbol.png"
+  },
+  {   id:2,
+      title:"Technician",
+      text1:"Get matched with artists needing your skills.",
+      text2:"Set your rates, and let your work speak.",
+      img:"/images/technician-symbol.png"
+  },
+  {   id:3,
+      title:"Studio Owner",
+      text1:"Showcase your studio, manage availability and earn.",
+      text2:"List gear, rules and extras up front.",
+      img:"/images/owner-symbol.png"
+  }
+]
+const OfferCard = ({title,img,text1,text2}) =>{
+  return(
+    <>
+    <div class="card">
+            <div class="title-box">
+              <h4>{title}</h4>
+              <img src={img} alt="Artist symbol" />
+            </div>
+            <ul>
+              <li style={{marginBottom:"0.5rem"}}>{text1}</li>
+              <li>{text2}</li>
+            </ul>
+          </div>
+    </>
+  )
+}
 const About = () => {
   return (
     <>
       <header className="hero2">
         <Navbar />
         <div class="overlay-box">
-          <h2>Connecting Creators, One Session at a Time</h2>
+          <h1>Connecting Creators, One Session at a Time</h1>
           <p class="para">
             We bring together Artists, Technicians, and Studios to simplify
             creative collaboration in the entertainment industry.
@@ -33,36 +69,9 @@ const About = () => {
       <section class="offers">
         <h2>What We Offer</h2>
         <div class="offers-menu">
-          <div class="card">
-            <div class="title-box">
-              <h5>Artist</h5>
-              <img src="/images/artist-symbol.png" alt="Artist symbol" />
-            </div>
-            <ul>
-              <li>Discover studios that fit your vibe and your budget.</li>
-              <li>Book sessions with Confidence.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="title-box">
-              <h5>Technician</h5>
-              <img src="/images/technician-symbol.png" alt="Technician symbol" />
-            </div>
-            <ul>
-              <li>Get matched with artists needing your skills.</li>
-              <li>Set your rates, and let your work speak.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="title-box">
-              <h5>Studio Owner</h5>
-              <img src="/images/owner-symbol.png" alt="Owner symbol" />
-            </div>
-            <ul>
-              <li>Showcase your studio, manage availability and earn.</li>
-              <li>List gear, rules and extras up front.</li>
-            </ul>
-          </div>
+          {offerList.map((offer)=>
+          <OfferCard key={offer.id} {...offer}/>
+          )}
         </div>
       </section>
       {/* *****************  Our story section ********************* */}

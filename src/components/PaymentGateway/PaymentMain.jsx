@@ -1,12 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
 import {Link} from "react-router-dom";
 import "./Payment.css";
 import Navbar from "../Navbar/Navbar";
 const PaymentMain = () => {
+
+  const [payment,setPayment] = useState(false);
+  const[paid,setPaid] = useState(false);
+
+  const successfulPayment = ()=>{
+    setPaid(!paid);
+    setPayment(!payment)
+  }
   return (
     <>
-      <header className="payment-banner">
-      <Navbar />
+   
+
+    <header className="payment-banner">
+         <Navbar />
 
       </header>
       <section className="payment-section">
@@ -80,10 +90,99 @@ const PaymentMain = () => {
             </form>
           </div>
         </div>
-               <div className="payment-btn-container">
-        <button id="pay-button">{`PAY \u00A0\u00A0\u00A0 € 103.63 Eur`}</button>
-                </div>
+       <div className="payment-btn-container">
+        <button id="pay-button" onClick={()=>setPayment(!payment)}>{`PAY \u00A0\u00A0\u00A0 € 103.63 Eur`}</button>
+       </div>
+       
       </section>
+  
+      {payment &&   <div className="modal-container" onClick={()=>setPayment(!payment)}>
+        
+        <div className="modal-card" onClick={(e)=>e.stopPropagation()}>
+    
+      <div className="payment-summary">
+        <h2>Payments</h2>
+        <div className="summary-box">
+          <div className="summary-row">
+            <span className="label">Studio:</span>
+            <span className="value">Sunset Recording</span>
+          </div>
+          <div className="summary-row">
+            <span className="label">Technician:</span>
+            <span className="value">John Doe</span>
+          </div>
+          <div className="summary-row">
+            <span className="label">Date:</span>
+            <span className="value">May 15, 2025</span>
+          </div>
+          <div className="summary-row">
+            <span className="label">Time:</span>
+            <span className="value">3:00 PM - 6:00 PM</span>
+          </div>
+          <div className="summary-row">
+            <span className="label">Duration:</span>
+            <span className="value">3 Hours</span>
+          </div>
+          <hr />
+          <div className="summary-row">
+            <span className="label">Studio Fee:</span>
+            <span className="value">€ 150</span>
+          </div>
+          <div className="summary-row">
+            <span className="label">Technician Fee:</span>
+            <span className="value">€ 60</span>
+          </div>
+          <div className="summary-row total">
+            <span className="label">Total:</span>
+            <span className="value">€ 210</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Payment Method */}
+      <div className="payment-method">
+        <h3>Payment Method</h3>
+        <div className="method-buttons">
+          <button className="active">Credit or Debit Card</button>
+          <button>PayPal</button>
+        </div>
+      </div>
+
+      {/* Card Payment */}
+      <div className="card-payment">
+        <h4>Card Payment</h4>
+        <input type="text" placeholder="Cardholder Name" />
+        <input type="text" placeholder="Card Number" />
+        <div className="row">
+          <input type="text" placeholder="MM / YY" />
+          <input type="text" placeholder="CVC" />
+        </div>
+      </div>
+
+      {/* Billing Information */}
+      <div className="billing-info">
+        <h4>Billing Information</h4>
+        <input type="text" placeholder="Full Name" />
+        <input type="text" placeholder="Billing Address" />
+        <div className="row">
+          <input type="text" placeholder="Country" />
+          <input type="text" placeholder="Zip / Postal Code" />
+        </div>
+      </div>
+
+      {/* Confirm Button */}
+      <button className="confirm-btn" onClick={successfulPayment}>Confirm and Pay</button>
+    </div>
+    </div>}
+ 
+ {paid && (<div className="message-container" onClick={()=>setPaid(!paid)}>
+
+  <div className="message-card" onClick={(e)=>e.stopPropagation()}>
+  <h2>Thank You!</h2>
+  <p>We will notify you once the request is accepted.</p>  
+ </div>
+ </div>)}
+
     </>
   );
 };

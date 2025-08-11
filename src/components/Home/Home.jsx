@@ -103,7 +103,6 @@ const bookingList = [
     desc: "Once a studio, artist, and technician are all matched in the same time slot, the session is auto confirmed or manually approved by the studio.",
   },
 ];
-console.log(bookingList);
 
 const BookingCard = ({ img, title, desc }) => {
   return (

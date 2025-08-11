@@ -1,7 +1,7 @@
 .payment-banner {
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    position: relative;
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.1)),
         url("/images/payment-banner.png ");
@@ -9,8 +9,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
+    
 }
+    
+
 
 .payment-section {
     margin: 4rem 2.5rem;
@@ -306,12 +308,162 @@
         padding: 1.2rem 1rem 0rem; 
     }
     .payment-btn-container{
-padding:0rem 2rem;
+      padding:0rem 2rem;
     }
      #pay-button{
-        
-        padding:1rem 1.5rem;
+         padding:1rem 1.5rem;
+        }
     }
-    
-       
+        
+ .modal-container {
+    background: var(--modalBgColor);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    width: 100%;
+    height: 100vh; 
+    overflow-y: auto; 
+    position: fixed;
+    inset:0;   /*all sides 0*/ 
+    padding: 2rem 1rem; 
+    z-index:500;
+}
+
+.modal-card {
+  margin-top:5rem;
+  max-width: 500px;
+  width:100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.payment-summary h2 {
+  margin-bottom: 15px;
+}
+
+.summary-box {
+  background: #fff8f0;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.summary-row.total {
+  font-weight: bold;
+}
+
+.payment-method {
+  margin-top: 20px;
+}
+.payment-method h3{
+    margin-bottom:0.5rem;
+}
+
+.method-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.method-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.method-buttons button.active {
+  background: #ff9800;
+  color: white;
+}
+
+.card-payment,
+.billing-info {
+  margin-top: 20px;
+}
+
+.card-payment input, .billing-info input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primaryColorBackground);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background: var(--btnHoverBgColor);
+} 
+
+.message-container{
+    width:100%;
+    height:100%;
+    background:var(--modalBgColor);
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:500;
+}
+
+.message-card{
+    width:350px;
+    height:300px;
+    background: #fff;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    gap:1.5rem;
+    text-align:center;
+    padding: 0 2.5rem;
+    font-size:calc(10px + 1vw);
+}
+.message-card h2{
+    color:#111;
+    font-size:2em;
+}
+.message-card p{
+    font-size:1em;
+    color:#444;
+    font-weight:500;
+}
+
+@media(max-width:425px){
+    .message-card{
+        width:250px;
+        height:200px;
+        padding: 0 3rem;
+    }
+    .message-card p{
+        line-height:1.5rem;
+    }
 }

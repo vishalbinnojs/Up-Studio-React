@@ -5,38 +5,48 @@
      width: 100vw;
      background:
     radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.6) 70%),
-    url("images/Hero2.jpg") no-repeat center 95%/cover;
+    url("images/Hero2.jpg") no-repeat center 100%/cover;
     
 
 }
 .overlay-box{
   height:calc(82vh - 5rem);
- padding:0rem 1rem;
+  padding:0rem 1rem;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:1rem;
+  gap:1.2rem;
   color:#fff;
   text-align:center;
 }
-.overlay-box h2{
- font-size:1.8rem;
+.overlay-box h1{
+ font-size:2.5rem;
  font-weight:bold;
 }
- .para{
-  font-size:0.80rem;
+ .overlay-box .para{
+  font-size:1rem;
   letter-spacing:0.05rem;
 }
 
 
-@media(max-width:768px){
-  .overlay-box h2{
-   font-size:1.5rem;
+@media(max-width:1024px){
+  .overlay-box h1{
+   font-size:2rem;
    
   }
   .overlay-box .para{
-    font-size:0.80rem;
+    font-size:0.95rem;
+
+  }
+}
+@media(max-width:768px){
+  .overlay-box h1{
+   font-size:1.8rem;
+   
+  }
+  .overlay-box .para{
+    font-size:0.90rem;
 
   }
 }
@@ -45,7 +55,7 @@
   .overlay-box{
     gap:2rem;
   }
-  .overlay-box h2{
+  .overlay-box h1{
     line-height:2rem;
   }
   .overlay-box .para{
@@ -58,39 +68,38 @@
 /************* section mission *****************/
 
 .mission{
-  margin:3rem 0rem;
-  padding:0rem 6rem;
+  margin:4rem 0rem;
+  padding:0rem 7rem;
 }
 .mission h2{
   margin-bottom:1.5rem;
 }
+ .mission .para{
+   line-height:1.5rem;
+  }
+  
 
 @media(max-width:768px){
   .mission {
+    text-align:center;
     padding: 0rem 4rem;
   }
-  .mission h2{
-    text-align:center;
-  }
+  
 }
 
 @media(max-width:680px){
   .mission{
     padding:0rem 5rem;
   }
-  .mission .para{
-   font-size:0.80rem;
-   line-height:1.1rem;
-  
-  }
+
 }
 @media(max-width:480px){
   .mission{
-    padding:0rem 2rem;
+    padding:0rem 2.5rem;
   }
    .mission .para{
-    font-size:0.80rem;
-    line-height:1.2rem;
+    font-size:0.95rem;
+    line-height:1.4rem;
     
   }
 }
@@ -99,7 +108,7 @@
     padding:0rem 1.5rem;
   }
    .mission .para{
-    font-size:0.7rem;
+    font-size:0.85rem;
     line-height:1.2rem;
     
   }
@@ -107,7 +116,7 @@
 /*********** Offers section *************/
 .offers{
   background:var(--tertiaryBgColor);
-  padding:3rem 6rem;
+  padding:3rem 7rem;
   
 }
 .offers h2{
@@ -224,15 +233,14 @@ margin-bottom:3rem;
 
   .our-story{
     margin:3rem 0rem 2rem 0rem;
-    padding: 0rem  6rem;
+    padding: 0rem  7rem;
   }
   .story-container{
     display: flex;
     flex-direction:row;
     justify-content: center;
     align-items:center;
-    /* flex-wrap:wrap; */
-    gap:1rem;
+    gap:4rem;
   }
   .story-text{
     width:50%;
@@ -241,7 +249,7 @@ margin-bottom:3rem;
     margin-bottom:1.5rem;
   }
   .story-text p{
-    font-size:0.80rem;
+    font-size:1rem;
     line-height:1.5rem;
   }
   
@@ -282,7 +290,7 @@ cursor:pointer;
   @media(max-width:768px){
     .our-story{
     margin:2.5rem 0rem 1.5rem 0rem;
-    padding: 0rem  5rem;
+    padding: 0rem  4rem;
   }
    .story-image{
     padding:1.5rem;
@@ -298,16 +306,19 @@ cursor:pointer;
         flex-wrap:wrap;
       }
        .story-text{
-    width:100%;
+        text-align:center;
+        width:100%;
   }
-  .story-text h2{
-    text-align:center;
-  }
+  
   }
   @media(max-width:480px){
       .our-story{
     margin:2rem 0rem 1rem 0rem;
-    padding: 0rem  2rem;
+    padding: 0rem  2.5rem;
+  }
+  .story-text p {
+    font-size:0.95rem;
+    line-height:1.4rem;
   }
  
   }
@@ -316,6 +327,12 @@ cursor:pointer;
     margin:2rem 0rem 1rem 0rem;
     padding: 0rem  1.5rem;
   }
+   .story-text p{
+    font-size:0.85rem;
+    line-height:1.2rem;
+    
+  }
  
   }
+
 
