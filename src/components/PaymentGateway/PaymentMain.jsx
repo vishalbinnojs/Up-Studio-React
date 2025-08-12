@@ -5,11 +5,11 @@ import Navbar from "../Navbar/Navbar";
 const PaymentMain = () => {
 
   const [payment,setPayment] = useState(false);
-  const[paid,setPaid] = useState(false);
+  const[showMessage,setShowMessage] = useState(false);
 
   const successfulPayment = ()=>{
-    setPaid(!paid);
-    setPayment(!payment)
+    setShowMessage(!showMessage);
+    setPayment(!payment);
   }
   return (
     <>
@@ -175,9 +175,9 @@ const PaymentMain = () => {
     </div>
     </div>}
  
- {paid && (<div className="message-container" onClick={()=>setPaid(!paid)}>
+ {showMessage && (<div className="message-container" onClick={()=>setShowMessage(!showMessage)}>
 
-  <div className="message-card" onClick={(e)=>e.stopPropagation()}>
+  <div className="message-card" onClick={(e)=>e.stopPropagation() }>
   <h2>Thank You!</h2>
   <p>We will notify you once the request is accepted.</p>  
  </div>
