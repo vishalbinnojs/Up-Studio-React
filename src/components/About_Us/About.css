@@ -5,7 +5,7 @@
      width: 100vw;
      background:
     radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.6) 70%),
-    url("images/Hero2.jpg") no-repeat center 100%/cover;
+    url("/images/Hero2.jpg")  no-repeat center 100%/cover;
     
 
 }
