@@ -18,8 +18,8 @@ const PaymentMain = lazy(() =>
 );
 const View = lazy(()=> import('./components/Home/View'))
 const How_It_Works = lazy(() => import('./components/How_It_Works/How_It_Works'))
-const Features = lazy(()=> imports('./components/Features/Features'))
-const FAQs = lazy(()=> imports('./components/FAQs/FAQs-Contact'));
+const Features = lazy(()=> import('./components/Features/Features'))
+const FAQs = lazy(()=> import('./components/FAQs/FAQs-Contact'));
 
 
 import "./App.css";
