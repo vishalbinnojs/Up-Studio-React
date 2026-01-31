@@ -25,4 +25,52 @@
   --modalBgColor:#33323271;
 }
 
+.pageLoader {
+  position: fixed;
+  inset: 0;
+  background: #0e0e0e; /* studio dark */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.pulse-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 140, 0, 0.7);
+  animation: pulse 1.6s ease-out infinite;
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.6);
+}
+
+.pulse-ring.delay {
+  position: absolute;
+  animation-delay: 0.8s;
+}
+
+.music-text {
+  margin-top: 24px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: orange;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Pulse animation (sound-wave feel) */
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+
 
