@@ -2,10 +2,7 @@ import React, { useState,useRef, useEffect } from "react";
 import {Link} from "react-router-dom"
 import {useLocation} from "react-router-dom";
 import logo1 from "../../assets/logo1.png";
-import logo2 from "<div styleName={} />
-<div styleName={} />
-<assets />
-<L></L>ogo2.png";
+import logo2 from "../../assets/Logo2.png";
 import "./Navbar.css";
 
 
